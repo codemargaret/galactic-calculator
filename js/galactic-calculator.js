@@ -10,7 +10,6 @@ export class Age {
     return earthYears;
   }
 
-//Not relevant without Moment
   ageInSeconds() {
     let earthSeconds = this.ageInYears() * 31536000;
     return earthSeconds;
