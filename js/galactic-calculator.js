@@ -68,4 +68,10 @@ export class Age {
     }
     return worldAverage;
   }
+
+  lifeOnMercury(gender, continent, smoker, exercise) {
+    let earthLife = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let mercuryLife = Math.round(earthLife / 0.24);
+    return mercuryLife;
+  }
 }

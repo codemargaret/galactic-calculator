@@ -47,9 +47,9 @@ describe('Age', function(){
     expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
   });
 
-  // it('calculates life expectancy on Mercury', function(){
-  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
-  // });
+  it('calculates life expectancy on Mercury', function(){
+    expect(newAge.lifeOnMercury('male', 'Asia', true, false)) .toEqual(246)
+  });
 
   // it('calculates life expectancy on Venus', function(){
   //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
