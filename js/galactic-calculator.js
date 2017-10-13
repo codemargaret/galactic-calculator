@@ -44,11 +44,11 @@ export class Age {
       worldAverage += 3;
     }
 //https://www.statista.com/statistics/270861/life-expectancy-by-continent/
-    if (continent === 'Africa') {
+    if (continent === 'africa') {
       worldAverage -= 10;
-    } else if (continent === 'Oceania' || continent === 'Latin America'){
+    } else if (continent === 'oceania' || continent === 'latinAmerica'){
       worldAverage += 3;
-    } else if (continent === 'North America' || continent === 'Europe'){
+    } else if (continent === 'northAmerica' || continent === 'europe'){
       worldAverage += 7;
     }
 //https://well.blogs.nytimes.com/2013/01/23/putting-a-number-to-smokings-toll/

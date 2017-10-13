@@ -7,7 +7,7 @@ $(document).ready(function(){
 //Capture user input
     let birthdate = $('#birthdate').val();
     let gender = $('input[name=gender]:checked').val();
-    let continent = $('#continent').val();
+    let continent = $('select#continent:selected').val();
     let smoker = $('input[name=smoker]:checked').val();
     let exercise = $('input[name=exercise]:checked').val();
 //Show user birthday and create new Age
@@ -37,5 +37,16 @@ $(document).ready(function(){
     $('#lifeMars').text(userLifeMars);
     let userLifeJupiter = userAge.lifeOnJupiter();
     $('#lifeJupiter').text(userLifeJupiter);
+//Calculate and show time left on each planet
+    let userTimeEarth = userAge.yearsLeftEarth();
+    $('#timeLeftEarth').text(userTimeEarth);
+    let userTimeMercury = userAge.yearsLeftMercury();
+    $('#timeLeftMercury').text(userTimeMercury);
+    let userTimeVenus = userAge.yearsLeftVenus();
+    $('#timeLeftVenus').text(userTimeVenus);
+    let userTimeMars = userAge.yearsLeftMars();
+    $('#timeLeftMars').text(userTimeMars);
+    let userTimeJupiter = userAge.yearsLeftJupiter();
+    $('#timeLeftJupiter').text(userTimeJupiter);
   });
 });

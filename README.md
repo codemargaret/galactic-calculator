@@ -27,14 +27,16 @@ _Clone the repository, then run the following commands in Terminal:_
 | Return the age of a human in Mars years.                     | 32 Earth years                                         | 17 Mars years         |
 | Return the age of a human in Jupiter years.                  | 32 Earth years                                         | 3 Jupiter years       |
 | Determine how many years a user has left to live on Earth.   | 32, female nonsmoker who exercises and lives in Africa | 39 years left         |
-| Determine how many years a user has left to live on Mercury. | 32, female nonsmoker who exercises and lives in Africa |                       |
-| Determine how many years a user has left to live on Venus.   | 32, female nonsmoker who exercises and lives in Africa |                       |
-| Determine how many years a user has left to live on Mars.    | 32, female nonsmoker who exercises and lives in Africa |                       |
-| Determine how many years a user has left to live on Jupiter. | 32, female nonsmoker who exercises and lives in Africa |                       |
+| Determine how many years a user has left to live on Mercury. | 32, female nonsmoker who exercises and lives in Africa | 163 years left        |
+| Determine how many years a user has left to live on Venus.   | 32, female nonsmoker who exercises and lives in Africa | 63 years left         |
+| Determine how many years a user has left to live on Mars.    | 32, female nonsmoker who exercises and lives in Africa | 21 years left         |
+| Determine how many years a user has left to live on Jupiter. | 32, female nonsmoker who exercises and lives in Africa | 3 years left          |
 
 ## Known Bugs
 
-_There are no known bugs at this time._
+_Accepts empty inputs_
+
+_Currently, the age calculation is not very accurate, because it's based on the fixed year 2017.  Ideally, I would like to get it working with Moment.js._
 
 ## Support and contact details
 
