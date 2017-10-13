@@ -4,11 +4,36 @@ $(document).ready(function(){
   $('#age').submit(function(event){
     event.preventDefault();
     $('#dateShow').text(moment());
-    var now = moment();
-    var birthdate = $('#birthdate').val();
+//Capture user input
+    let birthdate = $('#birthdate').val();
+    let gender = $('input[name=gender]:checked').val();
+    let continent = $('#continent').val();
+    let smoker = $('input[name=smoker]:checked').val();
+    let exercise = $('input[name=exercise]:checked').val();
+//Show user birthday and create new Age
     $('#birthdateShow').text(birthdate);
-    var userAge = new Age(birthdate);
-    var userAgeEarth = userAge.ageInYears();
-    $('#ageShow').text(userAgeEarth);
+    let userAge = new Age(birthdate);
+//Calculate and show age on different planets
+    let userAgeEarth = userAge.ageInYears();
+    $('#ageEarth').text(userAgeEarth);
+    let userAgeMercury = userAge.ageOnMercury();
+    $('#ageMercury').text(userAgeMercury);
+    let userAgeVenus = userAge.ageOnVenus();
+    $('#ageVenus').text(userAgeVenus);
+    let userAgeMars = userAge.ageOnMars();
+    $('#ageMars').text(userAgeMars);
+    let userAgeJupiter = userAge.ageOnJupiter();
+    $('#ageJupiter').text(userAgeJupiter);
+//Calculate and show life expectancy on different planets
+    let userLifeEarth = userAge.lifeOnEarth();
+    $('#lifeEarth').text(userLifeEarth);
+    let userLifeMercury = userAge.lifeOnMercury();
+    $('#lifeMercury').text(userLifeMercury);
+    let userLifeVenus = userAge.lifeOnVenus();
+    $('#lifeVenus').text(userLifeVenus);
+    let userLifeMars = userAge.lifeOnMars();
+    $('#lifeMars').text(userLifeMars);
+    let userLifeJupiter = userAge.lifeOnJupiter();
+    $('#lifeJupiter').text(userLifeJupiter);
   });
 });

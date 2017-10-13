@@ -40,35 +40,35 @@ describe('Age', function(){
   });
 
   it('calculates life expectancy on Earth', function(){
-    expect(newAge.lifeOnEarth('female', 'Africa', false, true)) .toEqual(71)
+    expect(newAge.lifeOnEarth('female', 'Africa', 'no', 'yes')) .toEqual(71)
   });
 
   it('calculates life expectancy on Earth', function(){
-    expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+    expect(newAge.lifeOnEarth('male', 'Asia', 'yes', 'no')) .toEqual(59)
   });
 
   it('calculates life expectancy on Mercury', function(){
-    expect(newAge.lifeOnMercury('male', 'Asia', true, false)) .toEqual(246)
+    expect(newAge.lifeOnMercury('male', 'Asia', 'yes', 'no')) .toEqual(246)
   });
 
   it('calculates life expectancy on Venus', function(){
-    expect(newAge.lifeOnVenus('male', 'Asia', true, false)) .toEqual(95)
+    expect(newAge.lifeOnVenus('male', 'Asia', 'yes', 'no')) .toEqual(95)
   });
 
   it('calculates life expectancy on Mars', function(){
-    expect(newAge.lifeOnMars('male', 'Asia', true, false)) .toEqual(31)
+    expect(newAge.lifeOnMars('male', 'Asia', 'yes', 'no')) .toEqual(31)
   });
 
   it('calculates life expectancy on Jupiter', function(){
-    expect(newAge.lifeOnJupiter('male', 'Asia', true, false)) .toEqual(5)
+    expect(newAge.lifeOnJupiter('male', 'Asia', 'yes', 'no')) .toEqual(5)
   });
 
   it('returns true if a user has surpassed the average life expectancy', function(){
     let oldTimer = new Age('1917-07-17')
-    expect(oldTimer.beatTheOdds('male', 'Asia', true, false)) .toEqual(true)
+    expect(oldTimer.beatTheOdds('male', 'Asia', 'yes', 'no')) .toEqual(true)
   });
 
   it('returns false if a user has not surpassed the average life expectancy', function(){
-    expect(newAge.beatTheOdds('male', 'Asia', true, false)) .toEqual(false)
+    expect(newAge.beatTheOdds('male', 'Asia', 'yes', 'no')) .toEqual(false)
   });
 });

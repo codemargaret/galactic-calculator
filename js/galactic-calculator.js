@@ -59,11 +59,11 @@ export class Age {
       worldAverage += 7;
     }
 //https://well.blogs.nytimes.com/2013/01/23/putting-a-number-to-smokings-toll/
-    if (smoker === true) {
+    if (smoker === 'yes') {
       worldAverage -= 10;
     }
 //http://www.independent.co.uk/life-style/health-and-families/health-news/a-daily-walk-can-add-seven-years-to-your-life-10478821.html
-    if (exercise === true) {
+    if (exercise === 'yes') {
       worldAverage += 7;
     }
     return worldAverage;
