@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 import { Age } from './../js/galactic-calculator.js';
 
 describe('Age', function(){

@@ -1,3 +1,5 @@
+var moment = require('moment');
+
 export class Age {
   constructor(birthdate) {
     this.birthdate = birthdate;
@@ -9,6 +11,13 @@ export class Age {
     let earthYears = now - birthYear;
     return earthYears;
   }
+
+//This function passed specs but returned NaN for some values in the browser
+  // ageInYears() {
+  //   let birthYear = this.birthdate;
+  //   let earthYears = moment().diff(birthYear, 'years', false);
+  //   return earthYears;
+  // }
 
   ageInSeconds() {
     let earthSeconds = this.ageInYears() * 31536000;
@@ -90,7 +99,7 @@ export class Age {
     let lifeExpect = this.lifeOnEarth(gender, continent, smoker, exercise);
     let age = this.ageInYears();
     if (age > lifeExpect) {
-      return true
+      return true;
     } else {
       return false;
     }
