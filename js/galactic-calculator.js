@@ -92,4 +92,14 @@ export class Age {
     let jupiterLife = Math.round(earthLife / 11.86);
     return jupiterLife;
   }
+
+  beatTheOdds(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let age = this.ageInYears();
+    if (age > lifeExpect) {
+      return true
+    } else {
+      return false;
+    }
+  }
 }

@@ -62,4 +62,13 @@ describe('Age', function(){
   it('calculates life expectancy on Jupiter', function(){
     expect(newAge.lifeOnJupiter('male', 'Asia', true, false)) .toEqual(5)
   });
+
+  it('returns true if a user has surpassed the average life expectancy', function(){
+    let oldTimer = new Age('1917-07-17')
+    expect(oldTimer.beatTheOdds('male', 'Asia', true, false)) .toEqual(true)
+  });
+
+  it('returns false if a user has not surpassed the average life expectancy', function(){
+    expect(newAge.beatTheOdds('male', 'Asia', true, false)) .toEqual(false)
+  });
 });
