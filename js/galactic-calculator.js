@@ -41,4 +41,31 @@ export class Age {
     let marsAge = Math.round(this.ageInYears() / 11.86);
     return marsAge;
   }
+
+  lifeOnEarth(gender, continent, smoker, exercise) {
+    let worldAverage = 71;
+//http://www.who.int/gho/mortality_burden_disease/life_tables/situation_trends_text/en/
+    if (gender === 'male') {
+      worldAverage -= 2;
+    } else {
+      worldAverage += 3;
+    }
+//https://www.statista.com/statistics/270861/life-expectancy-by-continent/
+    if (continent === 'Africa') {
+      worldAverage -= 10;
+    } else if (continent === 'Oceania' || continent === 'Latin America'){
+      worldAverage += 3;
+    } else if (continent === 'North America' || continent === 'Europe'){
+      worldAverage += 7;
+    }
+//https://well.blogs.nytimes.com/2013/01/23/putting-a-number-to-smokings-toll/
+    if (smoker === true) {
+      worldAverage -= 10;
+    }
+//http://www.independent.co.uk/life-style/health-and-families/health-news/a-daily-walk-can-add-seven-years-to-your-life-10478821.html
+    if (exercise === true) {
+      worldAverage += 7;
+    }
+    return worldAverage;
+  }
 }

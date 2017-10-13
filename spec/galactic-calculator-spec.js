@@ -38,4 +38,28 @@ describe('Age', function(){
   it('converts age in Earth years to Jupiter years', function(){
     expect(newAge.ageOnJupiter()) .toEqual(3)
   });
+
+  it('calculates life expectancy on Earth', function(){
+    expect(newAge.lifeOnEarth('female', 'Africa', false, true)) .toEqual(71)
+  });
+
+  it('calculates life expectancy on Earth', function(){
+    expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+  });
+
+  // it('calculates life expectancy on Mercury', function(){
+  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+  // });
+
+  // it('calculates life expectancy on Venus', function(){
+  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+  // });
+  //
+  // it('calculates life expectancy on Mars', function(){
+  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+  // });
+  //
+  // it('calculates life expectancy on Jupiter', function(){
+  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
+  // });
 });
