@@ -4,7 +4,7 @@ export class Age {
   }
 
   ageInYears() {
-    let now = '2017'
+    const now = '2017'
     let birthYear = this.birthdate.slice(0,4)
     let earthYears = now - birthYear;
     return earthYears;
@@ -94,5 +94,40 @@ export class Age {
     } else {
       return false;
     }
+  }
+
+  yearsLeftEarth(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let age = this.ageInYears();
+    let yearsLeft = lifeExpect - age;
+    return yearsLeft;
+  }
+
+  yearsLeftMercury(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnMercury(gender, continent, smoker, exercise);
+    let age = this.ageOnMercury();
+    let yearsLeft = lifeExpect - age;
+    return yearsLeft;
+  }
+
+  yearsLeftVenus(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnVenus(gender, continent, smoker, exercise);
+    let age = this.ageOnVenus();
+    let yearsLeft = lifeExpect - age;
+    return yearsLeft;
+  }
+
+  yearsLeftMars(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnMars(gender, continent, smoker, exercise);
+    let age = this.ageOnMars();
+    let yearsLeft = lifeExpect - age;
+    return yearsLeft;
+  }
+
+  yearsLeftJupiter(gender, continent, smoker, exercise) {
+    let lifeExpect = this.lifeOnJupiter(gender, continent, smoker, exercise);
+    let age = this.ageOnJupiter();
+    let yearsLeft = lifeExpect - age;
+    return yearsLeft;
   }
 }

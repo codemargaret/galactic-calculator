@@ -67,4 +67,24 @@ describe('Age', function(){
   it('returns false if a user has not surpassed the average life expectancy', function(){
     expect(newAge.beatTheOdds('male', 'Asia', 'yes', 'no')) .toEqual(false)
   });
+
+  it('shows the number of years a user has left on Earth', function(){
+    expect(newAge.yearsLeftEarth('female', 'Africa', 'no', 'yes')) .toEqual(39)
+  });
+
+  it('shows the number of years a user has left on Mercury', function(){
+    expect(newAge.yearsLeftMercury('female', 'Africa', 'no', 'yes')) .toEqual(163)
+  });
+
+  it('shows the number of years a user has left on Venus', function(){
+    expect(newAge.yearsLeftVenus('female', 'Africa', 'no', 'yes')) .toEqual(63)
+  });
+
+  it('shows the number of years a user has left on Mars', function(){
+    expect(newAge.yearsLeftMars('female', 'Africa', 'no', 'yes')) .toEqual(21)
+  });
+
+  it('shows the number of years a user has left on Jupiter', function(){
+    expect(newAge.yearsLeftJupiter('female', 'Africa', 'no', 'yes')) .toEqual(3)
+  });
 });
