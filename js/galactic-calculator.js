@@ -3,12 +3,6 @@ export class Age {
     this.birthdate = birthdate;
   }
 
-  // currentDate() {
-  //   now = moment();
-  //   return now
-  // }
-  //Keep getting 'moment is undefined' error.  For now, I'll format the functions with the current date inputted manually.  Hopefully I'll figure out how to use moment later.
-
   ageInYears() {
     let now = '2017'
     let birthYear = this.birthdate.slice(0,4)
