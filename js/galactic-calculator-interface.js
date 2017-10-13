@@ -8,6 +8,7 @@ $(document).ready(function(){
     var birthdate = $('#birthdate').val();
     $('#birthdateShow').text(birthdate);
     var userAge = new Age(birthdate);
-    $('#ageShow').text(userAge);
+    var userAgeEarth = userAge.ageInYears();
+    $('#ageShow').text(userAgeEarth);
   });
 });

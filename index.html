@@ -10,20 +10,34 @@
   </head>
   <body>
     <div class="container">
+      <h1>Super Galactic Age Calculator</h1>
       <form id="age">
         <label for="birthdate">Please enter your birthdate</label>
-        <input id = "birthdate" name="birthdate" type="date">
+        <input id = "birthdate" name="birthdate" type="date"><br>
+
         <label for="gender">Please enter your gender</label>
-        <input id = "gender" name="gender" type="text">
+        <input type="radio" name="gender" value="male"> Male<br>
+        <input type="radio" name="gender" value="female"> Female<br>
+
         <label for="continent">On what continent do you currently live?</label>
-        <input id = "continent" name="continent" type="text">
+        <select id="continent" name="continent">
+          <option value="northAmerica">North America</option>
+          <option value="latinAmerica">Latin America or Caribbean</option>
+          <option value="asia">Asia</option>
+          <option value="africa">Africa</option>
+          <option value="europe">Europe</option>
+          <option value="australia">Australia or Oceania</option>
+        </select><br>
+
         <label for="exercise">Do you walk at least 20 minutes a day?</label>
-        <input id = "exercise" name="exercise" type="date">
+        <input type="radio" name="exercise" value="yes">Yes<br>
+        <input type="radio" name="exercise" value="no">No<br>
+        <input id = "exercise" name="exercise" type="text">
         <button class="btn btn-primary" type="submit">Submit</button>
       </form>
       <p>The date is: <span id="dateShow"></span></p>
       <p>You entered this birthdate: <span id="birthdateShow"></span></p>
-      <p>Your current age is:<span id="ageShow"></span></p>
+      <p>Your current age is: <span id="ageShow"></span></p>
     </div>
   </body>
 </html>
