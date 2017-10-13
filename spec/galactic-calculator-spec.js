@@ -51,15 +51,15 @@ describe('Age', function(){
     expect(newAge.lifeOnMercury('male', 'Asia', true, false)) .toEqual(246)
   });
 
-  // it('calculates life expectancy on Venus', function(){
-  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
-  // });
-  //
-  // it('calculates life expectancy on Mars', function(){
-  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
-  // });
-  //
-  // it('calculates life expectancy on Jupiter', function(){
-  //   expect(newAge.lifeOnEarth('male', 'Asia', true, false)) .toEqual(59)
-  // });
+  it('calculates life expectancy on Venus', function(){
+    expect(newAge.lifeOnVenus('male', 'Asia', true, false)) .toEqual(95)
+  });
+
+  it('calculates life expectancy on Mars', function(){
+    expect(newAge.lifeOnMars('male', 'Asia', true, false)) .toEqual(31)
+  });
+
+  it('calculates life expectancy on Jupiter', function(){
+    expect(newAge.lifeOnJupiter('male', 'Asia', true, false)) .toEqual(5)
+  });
 });

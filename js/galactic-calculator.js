@@ -74,4 +74,22 @@ export class Age {
     let mercuryLife = Math.round(earthLife / 0.24);
     return mercuryLife;
   }
+
+  lifeOnVenus(gender, continent, smoker, exercise) {
+    let earthLife = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let venusLife = Math.round(earthLife / 0.62);
+    return venusLife;
+  }
+
+  lifeOnMars(gender, continent, smoker, exercise) {
+    let earthLife = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let marsLife = Math.round(earthLife / 1.88);
+    return marsLife;
+  }
+
+  lifeOnJupiter(gender, continent, smoker, exercise) {
+    let earthLife = this.lifeOnEarth(gender, continent, smoker, exercise);
+    let jupiterLife = Math.round(earthLife / 11.86);
+    return jupiterLife;
+  }
 }
