@@ -21,4 +21,24 @@ export class Age {
     let earthSeconds = this.ageInYears() * 31536000;
     return earthSeconds;
   }
+
+  ageOnMercury() {
+    let mercuryAge = Math.round(this.ageInYears() / 0.24);
+    return mercuryAge;
+  }
+
+  ageOnVenus() {
+    let venusAge = Math.round(this.ageInYears() / 0.62);
+    return venusAge;
+  }
+
+  ageOnMars() {
+    let marsAge = Math.round(this.ageInYears() / 1.88);
+    return marsAge;
+  }
+
+  ageOnJupiter() {
+    let marsAge = Math.round(this.ageInYears() / 11.86);
+    return marsAge;
+  }
 }

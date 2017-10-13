@@ -22,4 +22,20 @@ describe('Age', function(){
   it('converts age in years to age in seconds', function(){
     expect(newAge.ageInSeconds()) .toEqual(1009152000)
   });
+
+  it('converts age in Earth years to Mercury years', function(){
+    expect(newAge.ageOnMercury()) .toEqual(133)
+  });
+
+  it('converts age in Earth years to Venus years', function(){
+    expect(newAge.ageOnVenus()) .toEqual(52)
+  });
+
+  it('converts age in Earth years to Mars years', function(){
+    expect(newAge.ageOnMars()) .toEqual(17)
+  });
+
+  it('converts age in Earth years to Jupiter years', function(){
+    expect(newAge.ageOnJupiter()) .toEqual(3)
+  });
 });
