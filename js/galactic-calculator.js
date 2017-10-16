@@ -6,8 +6,8 @@ export class Age {
   }
 
   ageInYears() {
-    const now = '2017'
-    let birthYear = this.birthdate.slice(0,4)
+    const now = '2017';
+    let birthYear = this.birthdate.slice(0,4);
     let earthYears = now - birthYear;
     return earthYears;
   }

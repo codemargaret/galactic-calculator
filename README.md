@@ -36,9 +36,9 @@ _Clone the repository, then run the following commands in Terminal:_
 
 _Accepts empty inputs_
 
-_Continent selection does not show, although the value is stil captured._
+_Continent selection does not show, although the value is still captured._
 
-_Currently, the age calculation is not very accurate, because it's based on the fixed year 2017.  Ideally, I would like to get it working with Moment.js._
+_Currently, the age calculation is not very accurate, because it's based on the fixed year 2017.  Ideally, I would like to get it working with Moment.js or Date.now._
 
 ## Support and contact details
 

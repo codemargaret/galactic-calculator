@@ -7,3 +7,7 @@ body {
 p {
   padding: 10px;
 }
+
+#continent {
+  color: black;
+}
