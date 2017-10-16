@@ -17,10 +17,6 @@ describe('Age', function(){
     expect(newAge.ageInYears()) .toEqual(32)
   });
 
-  it('converts age in years to age in seconds', function(){
-    expect(newAge.ageInSeconds()) .toEqual(1009152000)
-  });
-
   it('converts age in Earth years to Mercury years', function(){
     expect(newAge.ageOnMercury()) .toEqual(133)
   });

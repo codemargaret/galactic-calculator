@@ -36,9 +36,7 @@ _Clone the repository, then run the following commands in Terminal:_
 
 _Accepts empty inputs_
 
-_Continent selection does not show, although the value is still captured._
-
-_Currently, the age calculation is not very accurate, because it's based on the fixed year 2017.  Ideally, I would like to get it working with Moment.js or Date.now._
+_In the future, I would like the site to congratulate users who have lived beyond their life expectancy.  I'd also like to add conversions for animal years._
 
 ## Support and contact details
 
