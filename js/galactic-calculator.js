@@ -1,27 +1,20 @@
-var moment = require('moment');
-
 export class Age {
   constructor(birthdate) {
     this.birthdate = birthdate;
   }
 
   ageInYears() {
-    const now = '2017';
-    let birthYear = this.birthdate.slice(0,4);
-    let earthYears = now - birthYear;
-    return earthYears;
-  }
-
-//This function passed specs but returned NaN for some values in the browser
-  // ageInYears() {
-  //   let birthYear = this.birthdate;
-  //   let earthYears = moment().diff(birthYear, 'years', false);
-  //   return earthYears;
-  // }
-
-  ageInSeconds() {
-    let earthSeconds = this.ageInYears() * 31536000;
-    return earthSeconds;
+    let birthday = this.birthdate;
+    let year = birthday.slice(0,4);
+    let month = birthday.slice(5,7);
+    let day = birthday.slice(8,10);
+    let date = month + '/' + day + '/' + year + ' 00:00:00';
+    let newDate = new Date(date);
+    let milliBirthday = newDate.getTime();
+    let milliNow = Date.now();
+    let ageInSeconds = (milliNow - milliBirthday)/1000;
+    let ageInYears = Math.round(ageInSeconds/31557600);
+    return ageInYears;
   }
 
   ageOnMercury() {

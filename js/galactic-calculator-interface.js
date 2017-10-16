@@ -16,8 +16,6 @@ $(document).ready(function(){
 //Calculate and show age on different planets
     let userAgeEarth = userAge.ageInYears();
     $('#ageEarth').text(userAgeEarth);
-    let userAgeSeconds = userAge.ageInSeconds();
-    $('#ageSeconds').text(userAgeSeconds);
     let userAgeMercury = userAge.ageOnMercury();
     $('#ageMercury').text(userAgeMercury);
     let userAgeVenus = userAge.ageOnVenus();
