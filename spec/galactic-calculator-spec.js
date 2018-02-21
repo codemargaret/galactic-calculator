@@ -4,9 +4,15 @@ import { Age } from './../js/galactic-calculator.js';
 
 describe('Age', function(){
   let newAge;
+  let oldTimer;
+  let baseTime;
+  let fakeDate;
 
   beforeEach(function(){
-    newAge = new Age('1985-07-17')
+    newAge = new Age('1985-07-17', 'female', 'africa', 'no', 'yes')
+    oldTimer = new Age('1917-07-17', 'male', 'asia', 'yes', 'no')
+    baseTime = new Date(2018, 2, 20);
+    fakeDate = jasmine.clock().mockDate(baseTime);
   });
 
   it('creates a new age with a birthdate', function(){
@@ -34,55 +40,54 @@ describe('Age', function(){
   });
 
   it('calculates life expectancy on Earth', function(){
-    expect(newAge.lifeOnEarth('female', 'africa', 'no', 'yes')) .toEqual(71)
+    expect(newAge.lifeOnEarth()) .toEqual(71)
   });
 
   it('calculates life expectancy on Earth', function(){
-    expect(newAge.lifeOnEarth('male', 'asia', 'yes', 'no')) .toEqual(59)
+    expect(oldTimer.lifeOnEarth()) .toEqual(59)
   });
 
   it('calculates life expectancy on Mercury', function(){
-    expect(newAge.lifeOnMercury('male', 'asia', 'yes', 'no')) .toEqual(246)
+    expect(oldTimer.lifeOnMercury()) .toEqual(246)
   });
 
   it('calculates life expectancy on Venus', function(){
-    expect(newAge.lifeOnVenus('male', 'asia', 'yes', 'no')) .toEqual(95)
+    expect(oldTimer.lifeOnVenus()) .toEqual(95)
   });
 
   it('calculates life expectancy on Mars', function(){
-    expect(newAge.lifeOnMars('male', 'asia', 'yes', 'no')) .toEqual(31)
+    expect(oldTimer.lifeOnMars()) .toEqual(31)
   });
 
   it('calculates life expectancy on Jupiter', function(){
-    expect(newAge.lifeOnJupiter('male', 'asia', 'yes', 'no')) .toEqual(5)
+    expect(oldTimer.lifeOnJupiter()) .toEqual(5)
   });
 
   it('returns true if a user has surpassed the average life expectancy', function(){
-    let oldTimer = new Age('1917-07-17')
-    expect(oldTimer.beatTheOdds('male', 'asia', 'yes', 'no')) .toEqual(true)
+    expect(oldTimer.beatTheOdds()) .toEqual(true)
   });
 
   it('returns false if a user has not surpassed the average life expectancy', function(){
-    expect(newAge.beatTheOdds('male', 'asia', 'yes', 'no')) .toEqual(false)
+    expect(newAge.beatTheOdds()) .toEqual(false)
   });
 
   it('shows the number of years a user has left on Earth', function(){
-    expect(newAge.yearsLeftEarth('female', 'africa', 'no', 'yes')) .toEqual(39)
+    expect(newAge.yearsLeftEarth()) .toEqual(39)
   });
 
   it('shows the number of years a user has left on Mercury', function(){
-    expect(newAge.yearsLeftMercury('female', 'africa', 'no', 'yes')) .toEqual(163)
+    expect(newAge.yearsLeftMercury()) .toEqual(163)
   });
 
   it('shows the number of years a user has left on Venus', function(){
-    expect(newAge.yearsLeftVenus('female', 'africa', 'no', 'yes')) .toEqual(63)
+    expect(newAge.yearsLeftVenus()) .toEqual(63)
   });
 
   it('shows the number of years a user has left on Mars', function(){
-    expect(newAge.yearsLeftMars('female', 'africa', 'no', 'yes')) .toEqual(21)
+    expect(newAge.yearsLeftMars()) .toEqual(21)
   });
 
   it('shows the number of years a user has left on Jupiter', function(){
-    expect(newAge.yearsLeftJupiter('female', 'africa', 'no', 'yes')) .toEqual(3)
+    expect(newAge.yearsLeftJupiter()) .toEqual(3)
   });
 });
