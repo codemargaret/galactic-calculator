@@ -5,20 +5,19 @@
 #### By _**Margaret Berry**_
 
 ## Description
-
 _This application calculates a user's age on different planets based on their solar years.  It also calculates life expectancy on Earth and on other planets._
 
 ## Setup/Installation Requirements
+_Run the following commands in Terminal:_
 
-_Clone the repository, then run the following commands in Terminal:_
-
-* _$ npm install_
-* _$ bower install_
-* _$ gulp build_
-* _$ gulp serve_
+1. `$ git clone` [this repository](https://github.com/codemargaret/galactic-calculator.git)
+2. `$ cd galactic-calculator`
+3. `$ npm install`
+4. `$ bower install`
+5. `$ gulp build`
+6. `$ gulp serve`
 
 ## Specifications
-
 | Spec                                                         | Input                                                  | Output                |
 |--------------------------------------------------------------|--------------------------------------------------------|-----------------------|
 | Convert age into seconds.                                    | 32 years                                               | 1,009,152,000 seconds |
@@ -33,19 +32,15 @@ _Clone the repository, then run the following commands in Terminal:_
 | Determine how many years a user has left to live on Jupiter. | 32, female nonsmoker who exercises and lives in Africa | 3 years left          |
 
 ## Known Bugs
+_There are no known bugs at this time._
 
-_Accepts empty inputs_
-
+## Future Features
 _In the future, I would like the site to congratulate users who have lived beyond their life expectancy.  I'd also like to add conversions for animal years._
 
 ## Support and contact details
-
-_If you have any updates or suggestions please contact [Margaret] or make a contribution yourself._
-
-[Margaret]: mailto:margaretshelaghmcgovern@gmail.com
+_If you have issues, questions, ideas, or concerns, please contact [Margaret](codeberry1@gmail.com). Feel free to make a contribution to the code._
 
 ## Technologies Used
-
 * _JavaScript_
 * _Node_
 * _Bower_
@@ -53,7 +48,6 @@ _If you have any updates or suggestions please contact [Margaret] or make a cont
 * _Karma_
 
 ### License
-
-*MIT License*
+*This software is licensed under the MIT license.*
 
 Copyright (c) 2017 **_Margaret Berry_**
