@@ -12,7 +12,7 @@ $(document).ready(function(){
     let exercise = $('input[name=exercise]:checked').val();
 //Show user birthday and create new Age
     $('#birthdateShow').text(birthdate);
-    let userAge = new Age(birthdate);
+    let userAge = new Age(birthdate, gender, continent, smoker, exercise);
 //Calculate and show age on different planets
     let userAgeEarth = userAge.ageInYears();
     $('#ageEarth').text(userAgeEarth);
